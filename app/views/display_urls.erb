@@ -1,0 +1,9 @@
+<div class = "container">
+<% if @url.valid? == false %>
+  <p>That's not a URL."</p>
+  <a href="/">Try again?</a>
+<% else %>
+  <p>Your shortened link is:</p>
+  <a href='<%= "#{@url.short_url}" %>'><%= "#{@url.short_url}" %></a>
+<% end %>
+</div>
