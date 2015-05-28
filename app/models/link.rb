@@ -1,5 +1,6 @@
 class Link < ActiveRecord::Base
   # Remember to create a migration!
+  belongs_to :user
   validates :long_url, presence: true, format: {:with => URI.regexp}
   before_save :shorten_url
 

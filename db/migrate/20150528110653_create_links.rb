@@ -4,6 +4,7 @@ class CreateLinks < ActiveRecord::Migration
       l.string :long_url
       l.string :short_url
       l.integer :click_count
+      l.integer :user_id
       l.datetime :created_at
     end
   end
